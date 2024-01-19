@@ -1,10 +1,12 @@
-public class Person {
+public class Person implements Payable, Comparable<Person> {
 
+    public static int id_gen=1;
     public static int id;
+
     public String name;
     public String surname;
     public String toString(){
-        return name + surname;
+        return id + name + surname;
     }
 
     public static int getId() {
@@ -30,10 +32,13 @@ public class Person {
 
     }
 
-    public Person(String name, String surname, String position, int salary){
+    public Person(String name, String surname, String position, double salary){
         this.name=name;
         this.surname=surname;
         this.position=position;
         this.salary=salary;
+    }
+
+    public void getPaymentAmount() {
     }
 }
